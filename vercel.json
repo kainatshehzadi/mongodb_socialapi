@@ -11,5 +11,15 @@
       "src": "/(.*)",
       "dest": "app/main.py"
     }
-  ]
+  ],
+  "env": {
+    "MONGO_URI": "@MONGO_URI",
+    "SECRET_KEY": "@SECRET_KEY",
+    "PUSHER_APP_ID": "@PUSHER_APP_ID",
+    "PUSHER_KEY": "@PUSHER_KEY",
+    "PUSHER_SECRET": "@PUSHER_SECRET",
+    "PUSHER_CLUSTER": "@PUSHER_CLUSTER",
+    "ONESIGNAL_APP_ID": "@ONESIGNAL_APP_ID",
+    "ONESIGNAL_API_KEY": "@ONESIGNAL_API_KEY"
+  }
 }
