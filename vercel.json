@@ -1,12 +1,26 @@
 {
-    "version": 2,
-    "builds": [
-      { "src": "main.py", "use": "@vercel/python" }
-    ],
-    "routes": [
-      { "src": "/(.*)", "dest": "app/main.py" }
-    ],
-    "env": {
-      "APP_MODULE": "app.main:app"
+  "version": 2,
+  "builds": [
+    {
+      "src": "app/main.py",
+      "use": "@vercel/python"
     }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "app/main.py"
+    }
+  ],
+  "env": {
+    "APP_MODULE": "app.main:app",
+    "MONGO_URI": "@MONGO_URI",
+    "MONGO_DB_NAME": "@MONGO_DB_NAME",
+    "PUSHER_APP_ID": "@PUSHER_APP_ID",
+    "PUSHER_KEY": "@PUSHER_KEY",
+    "PUSHER_SECRET": "@PUSHER_SECRET",
+    "PUSHER_CLUSTER": "@PUSHER_CLUSTER",
+    "ONESIGNAL_APP_ID": "@ONESIGNAL_APP_ID",
+    "ONESIGNAL_API_KEY": "@ONESIGNAL_API_KEY"
   }
+}
