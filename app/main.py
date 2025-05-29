@@ -8,7 +8,7 @@ from app.routers import comments, follow, likes, message, post, story, user
 app = FastAPI()
 @app.get("/")
 async def root():
-    return {"message": "Welcome to the Social Media API deployed on Vercel!"}
+    return {"message": "Welcome to the Social Media API deployed on Vercel."}
 
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request: Request, exc: RequestValidationError):
