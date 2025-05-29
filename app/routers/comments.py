@@ -87,7 +87,7 @@ async def update_comment(
 
     updated_data = {
         "text": payload.content,
-        "created_at": datetime.utcnow()
+        "created_at": datetime.now(timezone.utc)
     }
 
     await db["comments"].update_one({"_id": ObjectId(comment_id)}, {"$set": updated_data})
