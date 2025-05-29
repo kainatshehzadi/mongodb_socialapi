@@ -11,5 +11,6 @@
       "src": "/(.*)",
       "dest": "app/main.py"
     }
-  ]
+  ],
+   "env": {"APP_MODULE": "app/main:app"}
 }
