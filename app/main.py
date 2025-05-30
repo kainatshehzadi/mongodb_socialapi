@@ -4,7 +4,7 @@ from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 from app.api import auth
 from app.routers import comments, follow, likes, message, post, story, user  
-from mangum import Mangum
+
 app = FastAPI()
 @app.get("/")
 async def root():
@@ -47,5 +47,3 @@ app.include_router(message.router)
 app.include_router(story.router)
 app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
 
-
-handler = Mangum(app)
